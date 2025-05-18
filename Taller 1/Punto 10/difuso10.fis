@@ -1,0 +1,49 @@
+[System]
+Name='difuso10'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='e'
+Range=[-1 1]
+NumMFs=3
+MF1='N':'gaussmf',[0.265 -0.447174603174603]
+MF2='Z':'gaussmf',[0.119080759914117 -4.76e-06]
+MF3='P':'gaussmf',[0.314 0.409015873015873]
+
+[Input2]
+Name='de'
+Range=[-1 1]
+NumMFs=3
+MF1='N':'gaussmf',[0.328 -0.981257142857143]
+MF2='Z':'gaussmf',[0.168516230215877 0]
+MF3='P':'gaussmf',[0.322 0.887846560846561]
+
+[Output1]
+Name='u'
+Range=[-1 1]
+NumMFs=5
+MF1='N':'gaussmf',[0.214 -0.392783068783069]
+MF2='Z':'gaussmf',[0.119084802685886 0]
+MF3='P':'gaussmf',[0.203 0.578603174603174]
+MF4='MN':'gaussmf',[0.256 -0.975968253968254]
+MF5='MP':'gaussmf',[0.228 1.02255026455026]
+
+[Rules]
+1 1, 4 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+3 3, 5 (1) : 1
+3 2, 3 (1) : 1
+3 1, 2 (1) : 1
+2 2, 2 (1) : 1
+2 1, 1 (1) : 1
+2 3, 3 (1) : 1

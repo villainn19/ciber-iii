@@ -1,0 +1,33 @@
+[System]
+Name='Conjunto_difuso'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='X'
+Range=[-1.5 1.5]
+NumMFs=3
+MF1='N':'zmf',[-1.67446052631579 1.01893947368421]
+MF2='Z':'gaussmf',[0.0398119593885005 0]
+MF3='P':'smf',[-0.994243421052631 1.66]
+
+[Output1]
+Name='Y'
+Range=[-1.5 1.5]
+NumMFs=3
+MF1='N':'zmf',[-2.33215789473684 0.495942105263157]
+MF2='Z':'gaussmf',[0.0398 0]
+MF3='P':'smf',[-0.456305263157895 2.26789473684211]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
